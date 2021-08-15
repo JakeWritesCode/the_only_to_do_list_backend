@@ -47,6 +47,6 @@ jobs:
             black -l 100 --check accounts the_only_to_do_list_backend
       - run:
           name: Flake8
-          commamd: |
-            sournce venv/bin/activate
+          command: |
+            source venv/bin/activate
             flake8 accounts the_only_to_do_list_backend
