@@ -1,0 +1,1 @@
+The backend for my React to-do list app. Written in Django with DRF.
