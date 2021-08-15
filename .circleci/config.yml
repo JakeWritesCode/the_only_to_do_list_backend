@@ -38,15 +38,12 @@ jobs:
       - run:
           name: Run tests
           command: |
-            source venv/bin/activate
             python manage.py test
       - run:
           name: Black
           command: |
-            source venv/bin/activate
             black -l 100 --check accounts the_only_to_do_list_backend
       - run:
           name: Flake8
           command: |
-            source venv/bin/activate
             flake8 accounts the_only_to_do_list_backend
