@@ -1,3 +1,6 @@
+# -*- coding: utf-8 -*-
+"""Models for accounts app."""
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 
@@ -11,5 +14,5 @@ class TodoUser(AbstractUser):
     REQUIRED_FIELDS = []
     email = models.EmailField(unique=True)
 
-    def __str__(self):
+    def __str__(self):  # noqa: D105
         return f"{self.first_name} {self.last_name} - {self.email}"
