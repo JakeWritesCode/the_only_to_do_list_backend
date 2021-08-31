@@ -24,7 +24,9 @@ class UserSerializerTests(TestCase):
     def test_serialize(self):
         """Serializer should serialize a TodoUser correctly."""
         user = TodoUser.objects.create(
-            email="myemail@test.com", first_name="Jake", last_name="Saunders",
+            email="myemail@test.com",
+            first_name="Jake",
+            last_name="Saunders",
         )
         serializer = UserSerializer(user)
         assert serializer.data == {
