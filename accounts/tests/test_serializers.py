@@ -57,7 +57,7 @@ class UserSerializerTests(TestCase):
         self.data["password"] = "a"
         serializer = UserSerializer(data=self.data)
         is_valid = serializer.is_valid()
-        test = 1
+
         assert not is_valid
         assert serializer.errors["password"] == [
             "This password is too short. It must contain at least 8 characters.",
