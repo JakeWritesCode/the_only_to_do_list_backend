@@ -22,6 +22,7 @@ class UserSerializer(serializers.ModelSerializer):
         )
         user.password = make_password(validated_data["password"])
         user.save()
+        return user
 
     def update(self, instance, validated_data):  # noqa: D102
         instance.email = validated_data.get("email", instance.email)
