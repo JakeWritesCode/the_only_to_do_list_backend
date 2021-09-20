@@ -9,6 +9,7 @@ coverage==5.5
 cryptography==3.4.7
 Django==3.2.6
 djangorestframework==3.12.4
+django-cors-headers==3.8.0
 drf-jwt==1.19.1
 flake8==3.9.2
 flake8-quotes==3.3.0
