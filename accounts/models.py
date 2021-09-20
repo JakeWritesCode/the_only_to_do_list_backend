@@ -13,6 +13,8 @@ class TodoUser(AbstractUser):
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
     email = models.EmailField(unique=True)
+    first_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
 
     def __str__(self):  # noqa: D105
         return f"{self.first_name} {self.last_name} - {self.email}"
